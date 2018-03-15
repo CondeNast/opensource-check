@@ -29,7 +29,7 @@ This tool can currently only be used for JavaScript/Node projects.
     # if package has an organization namespace
     opensource-check --path ./opensource-check --org condenast
 
-<a href="https://technology.condenast.com"><img src="https://user-images.githubusercontent.com/1215971/37441822-2ca28780-27d1-11e8-8b10-a2b5c7220175.png" title="screenshot" width=450/></a>
+<a href="https://user-images.githubusercontent.com/1215971/37443485-74f4b324-27da-11e8-9e77-957de7edaec8.png" title="screenshot" width=450/></a>
 
 ## OpenSource Checklist
 
