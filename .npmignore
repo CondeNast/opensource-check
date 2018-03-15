@@ -1,0 +1,6 @@
+.DS_Store
+.github
+coverage
+src
+__checks__
+boilerplate

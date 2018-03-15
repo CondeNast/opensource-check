@@ -1,0 +1,40 @@
+{
+  "name": "@condenast/opensource-check",
+  "version": "0.0.1",
+  "description": "Test Runner for Open Source Conventions",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "directories": {
+    "src": "src",
+    "test": "src"
+  },
+  "bin": {
+    "opensource-check": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "Gautam Arora",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.3.0",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "jest-cli": "^22.3.0",
+    "mark-twain": "^2.0.2",
+    "yargs": "^11.0.0"
+  },
+  "repository": "https://github.com/CondeNast/opensource-check",
+  "preferGlobal": true,
+  "private": true
+}
