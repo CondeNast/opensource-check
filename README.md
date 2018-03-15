@@ -7,7 +7,7 @@ _Proudly built by:_
 
 <a href="https://technology.condenast.com"><img src="https://user-images.githubusercontent.com/1215971/35070721-3f136cdc-fbac-11e7-81b4-e3aa5cc70a17.png" title="Conde Nast Technology" width=350/></a>
 
-## Prerequisites
+## Pre-Requisites
 
 This tool can currently only be used for JavaScript/Node projects.
 
@@ -31,7 +31,7 @@ This tool can currently only be used for JavaScript/Node projects.
 
 <a href="https://technology.condenast.com"><img src="https://user-images.githubusercontent.com/1215971/37441822-2ca28780-27d1-11e8-8b10-a2b5c7220175.png" title="screenshot" width=450/></a>
 
-## Pre-Launch Checks
+## OpenSource Checklist
 
 The current checklist of things that are verified by the utility on every run:
 
@@ -39,7 +39,8 @@ The current checklist of things that are verified by the utility on every run:
 
 - [ ] Has a README
   - [ ] Has a Title
-  - [ ] Has an Installation section
+  - [ ] Has an Install section
+  - [ ] Has a Usage section
 - [ ] Has a License
 - [ ] Has a Code of Conduct
 - [ ] Has Contributing Guidelines
@@ -51,19 +52,20 @@ The current checklist of things that are verified by the utility on every run:
 ### Development
 
 - [ ] Has a package.json
-  - [ ] Has `@condenast` namespace
+  - [ ] Has org namespace, if applicable
   - [ ] Has a version
   - [ ] Has a description
-  - [ ] Has a main
-  - [ ] Has an apache 2.0 license
+  - [ ] Has a main or bin
+  - [ ] Has a link to git repository
+  - [ ] Has contributors
+  - [ ] Has a license
 - [ ] Has a .gitignore
-- [ ] Has a .npmignore
-- [ ] Has a Linter setup
-- [ ] Has a Testing setup
+- [ ] Has a linter
+- [ ] Has a test runner
 
 ## Boilerplate
 
-These documents are provided under the `boilerplate` folder for use by projects:
+These documents are provided under the [boilerplate](/boilerplate) directory for use by any project:
 
 1. LICENSE.md - [Apache 2.0](https://github.com/licenses/license-templates/blob/master/templates/apache.txt)
 2. CODE_OF_CONDUCT.md - [Contributor Covenant v1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct.md)

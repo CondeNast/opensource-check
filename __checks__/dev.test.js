@@ -15,9 +15,9 @@ describe("Development", () => {
   it("should have a .gitignore", () => {
     expect(fs.existsSync(`${rootPath}/.gitignore`)).toEqual(true);
   });
-  it("should have a .npmignore", () => {
-    expect(fs.existsSync(`${rootPath}/.npmignore`)).toEqual(true);
-  });
+  // it("should have a .npmignore", () => {
+  //   expect(fs.existsSync(`${rootPath}/.npmignore`)).toEqual(true);
+  // });
   it("should have a linter", () => {
     // const lintDeps = Object.keys(pkg.devDependencies).filter(devDep =>
     //   devDep.startsWith("eslint")
