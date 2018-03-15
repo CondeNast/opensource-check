@@ -26,11 +26,10 @@ This tool can currently only be used for JavaScript/Node projects.
 
     opensource-check --path <path-to-project-directory>
 
-    opensource-check --path .
-    opensource-check --path ./xml-to-react
-    opensource-check --path ./opensource-check
+    # if package has an organization namespace
+    opensource-check --path ./opensource-check --org condenast
 
-![image](https://user-images.githubusercontent.com/1215971/37441822-2ca28780-27d1-11e8-8b10-a2b5c7220175.png)
+<a href="https://technology.condenast.com"><img src="https://user-images.githubusercontent.com/1215971/37441822-2ca28780-27d1-11e8-8b10-a2b5c7220175.png" title="screenshot" width=450/></a>
 
 ## Pre-Launch Checks
 
