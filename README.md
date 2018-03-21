@@ -9,29 +9,58 @@ _Proudly built by:_
 
 ## Pre-Requisites
 
-This tool can currently only be used for JavaScript/Node projects.
+This utility can currently only be used for JavaScript/Node projects.
 
 ## Install
 
-#### Pre-launch:
+This utility can be used as a temporary dependency, global dependency or a dev dependency.
 
-    git clone https://github.com/CondeNast/opensource-check.git
-    npm install -g opensource-check/
-
-#### Post-launch:
-
-    npm install -g @condenast/opensource-check
+Head over to the [usage](##usage) section below on how to set it up based on your preference.
 
 ## Usage
 
-    opensource-check --path <path-to-project-directory>
+### Parameters
 
-    # if package has an organization namespace
-    opensource-check --path ./opensource-check --org condenast
+The tools accepts the following parameters:
+
+* --path - to specify the path of your project directory
+* --org - to specify the npm organization namespace for your project
+
+### Usage as a temporary dependency
+
+This is great option for taking this a quick spin!
+
+    npx @condenast/opensource-check --path <your-project-path>
+    npx @condenast/opensource-check --path ./glamorous
+    npx @condenast/opensource-check --path ./xml-to-react --org condenast
+
+### Usage as a global dependency
+
+This is a good option if you plan to use this frequently but don't want it to be a part of your project setup.
+
+    npm install -g @condenast/opensource-check
+
+    opensource-check --path <your-project-path>
+    opensource-check --path ./glamorous
+    opensource-check --path ./xml-to-react --org condenast
+
+### Usage as a dev dependency
+
+This is a wonderful option if you plan to use this as part of your project workflow including using in CI environment.
+
+    npm install -D @condenast/opensource-check
+
+    npx @condenast/opensource-check --path <your-project-path>
+    npx @condenast/opensource-check --path ./glamorous
+    npx @condenast/opensource-check --path ./xml-to-react --org condenast
+
+### Screenshot
+
+This is a sample screenshot of running this utlility:
 
 <img src="https://user-images.githubusercontent.com/1215971/37443485-74f4b324-27da-11e8-9e77-957de7edaec8.png" title="screenshot" width=350/></a>
 
-## OpenSource Checklist
+## Checklist
 
 The current checklist of things that are verified by the utility on every run:
 
@@ -73,6 +102,14 @@ These documents are provided under the [boilerplate](/boilerplate) directory for
 4. ISSUE_TEMPLATE.md
 5. PULL_REQUEST_TEMPLATE.md
 6. README.md
+
+## Projects that Checked-Out!
+
+This is a list of projects that pass the Open Source Checks:
+
+* OpenSource Check - how meta!
+* [XML To React](https://github.com/condenast/xml-to-react)
+* [Quick Bus](https://github.com/condenast/quick-bus)
 
 ## Thanks
 

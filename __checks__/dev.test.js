@@ -18,7 +18,7 @@ describe("Development", () => {
   // it("should have a .npmignore", () => {
   //   expect(fs.existsSync(`${rootPath}/.npmignore`)).toEqual(true);
   // });
-  it("should have a linter", () => {
+  it("should have a Linter", () => {
     // const lintDeps = Object.keys(pkg.devDependencies).filter(devDep =>
     //   devDep.startsWith("eslint")
     // );
@@ -26,14 +26,14 @@ describe("Development", () => {
     const lintCommand = pkg.scripts.lint;
     expect(lintCommand).not.toEqual("");
   });
-  it("should have tests", () => {
+  it("should have Tests", () => {
     // const testDir = pkg.directories.test;
     // expect(fs.existsSync(`${rootPath}/${testDir}`)).toEqual(true);
     const testCommand = pkg.scripts.test;
     expect(testCommand).not.toEqual("");
   });
   describe("package.json", () => {
-    it("should have the org namespace, if applicble", () => {
+    it("should have the org namespace, if applicable", () => {
       if (org) {
         expect(pkg.name.startsWith(`@${org}/`)).toEqual(true);
       }

@@ -15,7 +15,7 @@
   "bin": {
     "opensource-check": "./bin/index.js"
   },
-  "keywords": [],
+  "keywords": ["opensource", "javascript", "jest", "linter"],
   "author": "Gautam Arora",
   "license": "Apache-2.0",
   "devDependencies": {
