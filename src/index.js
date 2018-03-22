@@ -14,16 +14,15 @@ if (!fs.existsSync(rootPath)) {
 
 const run = () => {
   const options = {
-    projects: [__dirname], // run the tests in the opensource-check directory
     roots: ["__checks__"],
     verbose: true,
     // silent: true,
-    showConfig: true,
+    // showConfig: true,
     // noStackTrace: true,
     // useStderr: true,
     // json:true,
   };
-  jest.runCLI(options, options.projects, () => {});
+  jest.runCLI(options, [__dirname], () => {});
 };
 
 // run();
