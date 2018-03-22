@@ -17,7 +17,8 @@ const run = () => {
     projects: [__dirname], // run the tests in the opensource-check directory
     roots: ["__checks__"],
     verbose: true,
-    silent: true
+    // silent: true,
+    showConfig: true,
     // noStackTrace: true,
     // useStderr: true,
     // json:true,
