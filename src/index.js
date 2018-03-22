@@ -1,14 +1,14 @@
 const fs = require("fs");
-const { argv } = require("yargs");
 const jest = require("jest-cli");
 
+const { argv } = require("yargs")
+                  .usage('Usage: $0 --path [path]')
+                  .describe('path', 'Path to your local project directory')
+                  .demandOption(['path']);
 const { path: rootPath } = argv;
-if (!rootPath) {
-  console.error("ERROR: --path: <path> is required"); // eslint-disable-line no-console
-  process.exit(0);
-}
+
 if (!fs.existsSync(rootPath)) {
-  console.error(`ERROR: path ${rootPath} does not exist`); // eslint-disable-line no-console
+  console.error(`Error: path ${rootPath} does not exist`); // eslint-disable-line no-console
   process.exit(0);
 }
 
