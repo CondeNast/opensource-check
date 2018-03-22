@@ -1,6 +1,6 @@
 {
   "name": "@condenast/opensource-check",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "description": "Test Runner for Open Source Conventions",
   "main": "src/index.js",
   "scripts": {
@@ -15,7 +15,12 @@
   "bin": {
     "opensource-check": "./bin/index.js"
   },
-  "keywords": ["opensource", "javascript", "jest", "linter"],
+  "keywords": [
+    "opensource",
+    "javascript",
+    "jest",
+    "linter"
+  ],
   "author": "Gautam Arora",
   "license": "Apache-2.0",
   "devDependencies": {
