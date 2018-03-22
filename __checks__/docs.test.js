@@ -49,7 +49,7 @@ describe("Documentation", () => {
         .toString();
       pkg = JSON.parse(fs.readFileSync(`${rootPath}/package.json`, "utf8"));
     });
-    it("should have a Title", () => {
+    it("Should have Package Name as Title", () => {
       let pkgName = pkg.name;
       const pkgNameParts = pkgName.split("/");
       if (pkgNameParts.length === 2) {
