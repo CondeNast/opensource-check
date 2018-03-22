@@ -1,6 +1,6 @@
 {
   "name": "@condenast/opensource-check",
-  "version": "0.0.1-4",
+  "version": "0.0.1-5",
   "description": "Test Runner for Open Source Conventions",
   "main": "src/index.js",
   "scripts": {
