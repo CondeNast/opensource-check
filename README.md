@@ -110,6 +110,7 @@ This is a list of projects that pass the Open Source Checks:
 * OpenSource Check - how meta!
 * [XML To React](https://github.com/condenast/xml-to-react)
 * [Quick Bus](https://github.com/condenast/quick-bus)
+* [Launch Vehicle FBM](https://github.com/condenast/launch-vehicle-fbm)
 
 ## Thanks
 
