@@ -2,42 +2,29 @@ const fs = require("fs");
 const { argv } = require("yargs");
 
 describe("Development", () => {
-  let pkg;
-  let rootPath;
-  let org;
-  beforeAll(() => {
-    ({ path: rootPath, org } = argv);
-    pkg = JSON.parse(fs.readFileSync(`${rootPath}/package.json`, "utf8"));
-  });
+  let { path: rootPath, org } = argv;
+  let pkg = JSON.parse(fs.readFileSync(`${rootPath}/package.json`, "utf8"));
+
   it("should have a package.json", () => {
     expect(fs.existsSync(`${rootPath}/package.json`)).toEqual(true);
   });
   it("should have a .gitignore", () => {
     expect(fs.existsSync(`${rootPath}/.gitignore`)).toEqual(true);
   });
-  // it("should have a .npmignore", () => {
-  //   expect(fs.existsSync(`${rootPath}/.npmignore`)).toEqual(true);
-  // });
   it("should have a Linter", () => {
-    // const lintDeps = Object.keys(pkg.devDependencies).filter(devDep =>
-    //   devDep.startsWith("eslint")
-    // );
-    // expect(lintDeps.length).not.toEqual(0);
     const lintCommand = pkg.scripts.lint;
     expect(lintCommand).not.toEqual("");
   });
   it("should have Tests", () => {
-    // const testDir = pkg.directories.test;
-    // expect(fs.existsSync(`${rootPath}/${testDir}`)).toEqual(true);
     const testCommand = pkg.scripts.test;
     expect(testCommand).not.toEqual("");
   });
   describe("package.json", () => {
-    it("should have the org namespace, if applicable", () => {
-      if (org) {
-        expect(pkg.name.startsWith(`@${org}/`)).toEqual(true);
-      }
-    });
+    if (org) {
+      it("should have the org namespace", () => {
+          expect(pkg.name.startsWith(`@${org}/`)).toEqual(true);
+      });
+    }
     it("should have a version", () => {
       expect(pkg.version).not.toEqual("");
     });

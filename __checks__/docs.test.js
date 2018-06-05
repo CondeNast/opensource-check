@@ -2,15 +2,17 @@ const fs = require("fs");
 const { argv } = require("yargs");
 
 describe("Documentation", () => {
-  let rootPath;
-  let readmeContent;
-  beforeAll(() => {
-    ({ path: rootPath } = argv);
-    readmeContent = fs.readFileSync(`${rootPath}/README.md`, "utf8").toString();
-  });
+  let { path: rootPath, org } = argv;
+  let readmeContent = fs.readFileSync(`${rootPath}/README.md`, "utf8").toString();;
+
   it("should have a Readme", () => {
     expect(fs.existsSync(`${rootPath}/README.md`)).toEqual(true);
   });
+  if(org === "condenast") {
+    it("should have a FYI", () => {
+      expect(fs.existsSync(`${rootPath}/FYI.md`)).toEqual(true);
+    });
+  }
   it("should have a License", () => {
     expect(
       fs.existsSync(`${rootPath}/LICENSE`) ||
