@@ -2,9 +2,10 @@ const fs = require("fs");
 const jest = require("jest-cli");
 
 const { argv } = require("yargs")
-                  .usage('Usage: $0 --path [path]')
-                  .describe('path', 'Path to your local project directory')
-                  .demandOption(['path']);
+  .usage("Usage: $0 --path [path]")
+  .describe("path", "Path to your local project directory")
+  .demandOption(["path"]);
+
 const { path: rootPath } = argv;
 
 if (!fs.existsSync(rootPath)) {

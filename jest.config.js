@@ -3,6 +3,6 @@ module.exports = {
   testEnvironment: "node",
   roots: ["src"],
   haste: {
-    "providesModuleNodeModules": [".*"]
+    providesModuleNodeModules: [".*"]
   }
 };
