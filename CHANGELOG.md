@@ -20,8 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [x.y.z]: https://github.com/CondeNast/opensource-check/compare/1.0.0...x.y.z
 -->
 
-## [Unreleased]
-- Initial Release
+## 0.0.1 - 2018-06-05
+### Initial Release
+- Added initial tests for development and documentation tests
+- Added option to pass org namespace
+- Fixed issue with global installation
 
 <!-- Update the Unreleased comparison range with each release -->
 [Unreleased]: https://github.com/CondeNast/opensource-check/compare/x.y.z...master
