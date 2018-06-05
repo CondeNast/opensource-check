@@ -19,7 +19,11 @@ const run = () => {
     verbose: true,
     testPathIgnorePatterns: []
   };
-  jest.runCLI(options, [__dirname], () => {});
+  jest.runCLI(options, [__dirname]).then(({results}) => {
+    if(!results.success) {
+      process.exit(1)
+    }
+  });
 };
 
 // run();
