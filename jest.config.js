@@ -1,5 +1,8 @@
 module.exports = {
   collectCoverage: false,
   testEnvironment: "node",
-  roots: ["src"]
+  roots: ["src"],
+  haste: {
+    "providesModuleNodeModules": [".*"]
+  }
 };

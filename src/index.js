@@ -16,11 +16,7 @@ const run = () => {
   const options = {
     roots: ["__checks__"],
     verbose: true,
-    // silent: true,
-    // showConfig: true,
-    // noStackTrace: true,
-    // useStderr: true,
-    // json:true,
+    testPathIgnorePatterns: []
   };
   jest.runCLI(options, [__dirname], () => {});
 };
