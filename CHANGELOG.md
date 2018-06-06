@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [x.y.z]: https://github.com/CondeNast/opensource-check/compare/1.0.0...x.y.z
 -->
 
-## 0.0.3 - 2018-06-06
+## 0.0.4 - 2018-06-06
 - Update how we gather command line args
 
 ## 0.0.3 - 2018-06-05
