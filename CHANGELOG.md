@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [x.y.z]: https://github.com/CondeNast/opensource-check/compare/1.0.0...x.y.z
 -->
 
+## Unreleased
+- Update how we gather command line args
+
 ## 0.0.3 - 2018-06-05
 - Fix conditional checks
 - Add FYI (as required for Conde Nast projects)
