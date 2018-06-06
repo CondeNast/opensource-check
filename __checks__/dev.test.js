@@ -1,8 +1,8 @@
 const fs = require("fs");
-const { path, org } = require('../src/argv');
+const { path, org } = require("../src/argv");
 
 describe("Development", () => {
-  let pkg = JSON.parse(fs.readFileSync(`${path}/package.json`, "utf8"));
+  const pkg = JSON.parse(fs.readFileSync(`${path}/package.json`, "utf8"));
 
   it("should have a package.json", () => {
     expect(fs.existsSync(`${path}/package.json`)).toEqual(true);
@@ -21,7 +21,7 @@ describe("Development", () => {
   describe("package.json", () => {
     if (org) {
       it("should have the org namespace", () => {
-          expect(pkg.name.startsWith(`@${org}/`)).toEqual(true);
+        expect(pkg.name.startsWith(`@${org}/`)).toEqual(true);
       });
     }
     it("should have a version", () => {
