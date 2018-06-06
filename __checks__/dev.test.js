@@ -1,15 +1,14 @@
 const fs = require("fs");
-const { argv } = require("yargs");
+const { path, org } = require('../src/argv');
 
 describe("Development", () => {
-  let { path: rootPath, org } = argv;
-  let pkg = JSON.parse(fs.readFileSync(`${rootPath}/package.json`, "utf8"));
+  let pkg = JSON.parse(fs.readFileSync(`${path}/package.json`, "utf8"));
 
   it("should have a package.json", () => {
-    expect(fs.existsSync(`${rootPath}/package.json`)).toEqual(true);
+    expect(fs.existsSync(`${path}/package.json`)).toEqual(true);
   });
   it("should have a .gitignore", () => {
-    expect(fs.existsSync(`${rootPath}/.gitignore`)).toEqual(true);
+    expect(fs.existsSync(`${path}/.gitignore`)).toEqual(true);
   });
   it("should have a Linter", () => {
     const lintCommand = pkg.scripts.lint;
