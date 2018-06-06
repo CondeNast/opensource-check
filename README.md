@@ -21,9 +21,9 @@ Head over to the [usage](##usage) section below on how to set it up based on you
 
 ### Parameters
 
-The tools accepts the following parameters:
+The utility accepts the following parameters:
 
-* --path - to specify the path of your project directory
+* --path - to specify the path of your project directory (defaults to current working directory)
 * --org - to specify the npm organization namespace for your project
 
 ### Usage as a temporary dependency

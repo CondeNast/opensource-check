@@ -1,55 +1,54 @@
 const fs = require("fs");
-const { argv } = require("yargs");
+const { path, org } = require('../src/argv');
 
 describe("Documentation", () => {
-  let { path: rootPath, org } = argv;
-  let readmeContent = fs.readFileSync(`${rootPath}/README.md`, "utf8").toString();;
+  let readmeContent = fs.readFileSync(`${path}/README.md`, "utf8").toString();;
 
   it("should have a Readme", () => {
-    expect(fs.existsSync(`${rootPath}/README.md`)).toEqual(true);
+    expect(fs.existsSync(`${path}/README.md`)).toEqual(true);
   });
   if(org === "condenast") {
     it("should have a FYI", () => {
-      expect(fs.existsSync(`${rootPath}/FYI.md`)).toEqual(true);
+      expect(fs.existsSync(`${path}/FYI.md`)).toEqual(true);
     });
   }
   it("should have a License", () => {
     expect(
-      fs.existsSync(`${rootPath}/LICENSE`) ||
-        fs.existsSync(`${rootPath}/LICENSE.md`)
+      fs.existsSync(`${path}/LICENSE`) ||
+        fs.existsSync(`${path}/LICENSE.md`)
     ).toEqual(true);
   });
   it("should have a Code of Conduct", () => {
-    expect(fs.existsSync(`${rootPath}/CODE_OF_CONDUCT.md`)).toEqual(true);
+    expect(fs.existsSync(`${path}/CODE_OF_CONDUCT.md`)).toEqual(true);
   });
   it("should have Contributing Guidelines", () => {
-    expect(fs.existsSync(`${rootPath}/CONTRIBUTING.md`)).toEqual(true);
+    expect(fs.existsSync(`${path}/CONTRIBUTING.md`)).toEqual(true);
   });
   it("should have an Issue Template", () => {
-    expect(fs.existsSync(`${rootPath}/.github/ISSUE_TEMPLATE.md`)).toEqual(
+    expect(fs.existsSync(`${path}/.github/ISSUE_TEMPLATE.md`)).toEqual(
       true
     );
   });
   it("should have a Pull Request Template", () => {
     expect(
-      fs.existsSync(`${rootPath}/.github/PULL_REQUEST_TEMPLATE.md`)
+      fs.existsSync(`${path}/.github/PULL_REQUEST_TEMPLATE.md`)
     ).toEqual(true);
   });
   it("should have a Changelog", () => {
-    expect(fs.existsSync(`${rootPath}/CHANGELOG.md`)).toEqual(true);
+    expect(fs.existsSync(`${path}/CHANGELOG.md`)).toEqual(true);
   });
   it("should have Examples", () => {
     const hasExamplesSection = /##.*Usage/.test(readmeContent);
-    const hasExamplesDir = fs.existsSync(`${rootPath}/examples`);
+    const hasExamplesDir = fs.existsSync(`${path}/examples`);
     expect(hasExamplesSection || hasExamplesDir).toEqual(true);
   });
   describe("Readme", () => {
     let pkg;
     beforeAll(() => {
       readmeContent = fs
-        .readFileSync(`${rootPath}/README.md`, "utf8")
+        .readFileSync(`${path}/README.md`, "utf8")
         .toString();
-      pkg = JSON.parse(fs.readFileSync(`${rootPath}/package.json`, "utf8"));
+      pkg = JSON.parse(fs.readFileSync(`${path}/package.json`, "utf8"));
     });
     it("Should have Package Name as Title", () => {
       let pkgName = pkg.name;
