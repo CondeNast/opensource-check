@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --fix .",
     "pretest": "npm run lint",
-    "test": "jest"
+    "test": "./bin/index.js && jest"
   },
   "directories": {
     "src": "src",
