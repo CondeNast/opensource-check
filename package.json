@@ -31,11 +31,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "jest": "^22.3.0",
+    "jest": "^24.8.0",
     "prettier": "^1.10.2"
   },
   "dependencies": {
-    "jest-cli": "^22.3.0",
+    "jest-cli": "^24.8.0",
     "yargs": "^11.0.0"
   },
   "repository": "https://github.com/CondeNast/opensource-check",
