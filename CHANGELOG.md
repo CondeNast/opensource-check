@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 [x.y.z]: https://github.com/CondeNast/opensource-check/compare/1.0.0...x.y.z
 -->
+## 0.0.5 - 2021-05-24
+- Run opensource-check on opensource-check (#15)
+- Fix security warnings (#16)
 
 ## 0.0.4 - 2018-06-06
 - Update how we gather command line args
